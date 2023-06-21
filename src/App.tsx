@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './App.css';
 
@@ -36,8 +36,8 @@ function App() {
         <h1 className="title">slider</h1>
       <Swiper
         slidesPerView={slidePreview}
-        pagination={{clickable: true}}
-        modules={[Navigation]}
+        pagination={{clickable: true, dynamicBullets: true}}
+        modules={[Navigation, Pagination]}
         navigation={true}
       >
        {data.map( (item) => (
